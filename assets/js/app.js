@@ -1,27 +1,25 @@
-$('#test').text("this is a test")
+let url = "";
+let query = "";
 
-const apiKey = "";
+$('#test-button').on('click', function () {
 
-let query = "earth";
-let url = `https://en.wikipedia.org/w/api.php?action=query&format=json&meta=siteinfo&titles=${query}&utf8=1&prop=description&prop=extracts`
+    query = $("input").val();
+    console.log(query);
 
-// test api call for media wiki:
+    url = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=${query}`;
 
-/*
-$.ajax({
-    type: "GET",
-    url:
-      "https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/",
-    headers: { "user-key": "bc5ec19a8a53a21a05c11c232c6edc9f" }
-  });
-*/
-
-$.ajax({
-    url: "https://cors-anywhere.herokuapp.com/" + url,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response);
-  });
+    $.ajax({
+        url: "https://cors-anywhere.herokuapp.com/" + url,
+        method: "POST"
+    }).then(function (response) {
+        console.log(response);
+        $("#test").empty();
+        for (let i = 0; i < 10; i++) {
+            let extract = response.query.search[i].snippet;
+            $("#test").append(`<h3>${i}: ${extract}</h3>`)
+        }
+    });
+})
 
 
-  //https://test.wikipedia.org/w/api.php?action=centralauthtoken&format=json
+//api.php?action=query&prop=extracts&exchars=175
