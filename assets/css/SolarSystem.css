@@ -6,11 +6,19 @@
             background-repeat: no-repeat;
             color: #626668;
         }
+
+        #test{
+            position: relative;
+            float: right;
+            width: 45%
+
+        }
         /* Solar System Styles */
         
         ul.solarsystem {
             position: relative;
             height: 640px;
+            width: 50%;
             list-style: none;
             -webkit-transition: all 0.09s ease-in;
             -moz-transition: all 0.09s ease-in;
@@ -388,6 +396,8 @@ ul.solarsystem li.active span {
                 -moz-transform: rotate(360deg)
             }
         }
+
+
         /* ul.solarsystem:hover li {
     -webkit-animation-play-state: paused;
 } */
