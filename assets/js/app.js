@@ -3,7 +3,7 @@ let query = "";
 
 
 // queries wikipedia
-$('.star').on('click', function (e) {
+$('.planet').on('click', function (e) {
     e.preventDefault
     query = $(this).attr("data");
     url = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
