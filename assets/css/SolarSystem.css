@@ -1,7 +1,9 @@
         @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
         body {
             font: 14px/1.5 "PT Sans Narrow", sans-serif;
-            background: #080e24 url(http://neography.com/experiment/circles/solarsystem/bg.jpg) repeat;
+            background-image: url("../assets/images/eclipse-1492818_1920.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
             color: #626668;
         }
         /* Solar System Styles */
