@@ -31,14 +31,12 @@ body {
 }
 
 #planets {
-    */margin: 0 auto;*/
     display: flex;
     justify-content: space-evenly;
 }
 
 #animation {
     margin: 0 auto;
-
 }
 
 /* Modal */
