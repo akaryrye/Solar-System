@@ -1,49 +1,35 @@
-let url = "";
-let query = "";
-
-// Wikipedia URL: https://en.wikipedia.org/wiki/ + (data:planet name)
-
-// queries wikipedia
+// Queries wikipedia
 $('.planet').on('click', function (e) {
     e.preventDefault
-    query = $(this).attr("data");
-    url = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
+    let query = $(this).attr("data");
+    let wikiURL = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
+    let nasaKEY = "ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO"
+    let nasaURL = "https://images-api.nasa.gov/search?q="
 
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/" + url,
+        url: "https://cors-anywhere.herokuapp.com/" + wikiURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
         $("#test").empty();
         let key = Object.keys(response.query.pages)[0]
         $("#test").html(response.query.pages[key].extract)
+        modal.style.display = "block";
     });
-})
 
-let nasaKEY = "ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO"
-let nasaURL = "https://api.nasa.gov/planetary/apod?api_key="
+    $.ajax({
+        url: nasaURL + query,
+        method: "GET"
+    }).then(function (nasa) {
+        console.log(nasa.collection.items[1].links[0])
+        $("#nasa-test").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
+    });
+});
 
-$.ajax({
-    url: nasaURL + nasaKey,
-    success: function (result) {
-        if ("copyright" in result) {
-            $("#copyright").text("Image Credits: " + result.copyright);
-        }
-        else {
-            $("#copyright").text("Image Credits: " + "Public Domain");
-        }
+// Hide modal on click
+$(".close").on("click", function () {
+    $("#myModal").style.display = "none";
+});
 
-        if (result.media_type == "video") {
-            $("#apod_img_id").css("display", "none");
-            $("#apod_vid_id").attr("src", result.url);
-        }
-        else {
-            $("#apod_vid_id").css("display", "none");
-            $("#apod_img_id").attr("src", result.url);
-        }
-        $("#reqObject").text(url);
-        $("#returnObject").text(JSON.stringify(result, null, 4));
-        $("#apod_explaination").text(result.explanation);
-        $("#apod_title").text(result.title);
-    }
+$(document).on("click", $("#myModal"), function (e) {
+    $("#myModal").style.display = "none";
 });

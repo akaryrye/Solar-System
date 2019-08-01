@@ -6,48 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
     <link rel="stylesheet" href="assets/css/SolarSystem.css">
-
 </head>
 
 <body>
 
-    <div id="container">
-        <div id="welcome">Solar System</div>
+    <div id="nav">
+        <div id="title">The Solar System</div>
         <div id="planets">
-            <button class="planet" data="mercury">Mercury</button>
+            <button class="planet" data="sun">Sun</button>
+            <button class="planet" data="mercury (planet)">Mercury</button>
             <button class="planet" data="venus">Venus</button>
             <button class="planet" data="earth">Earth</button>
+            <button class="planet" data="moon">Moon</button>
             <button class="planet" data="mars">Mars</button>
             <button class="planet" data="jupiter">Jupiter</button>
             <button class="planet" data="saturn">Saturn</button>
             <button class="planet" data="neptune">Neptune</button>
             <button class="planet" data="pluto">Pluto</button>
         </div>
-        <div id="test"></div>
     </div>
 
-    <section id="clearfix">
+    <section id="clearfix" id="animation">
         <ul class="solarsystem">
-            <li class="sun"><a href="#sun"><span>Sun</span></a></li>
-            <li class="mercury"><a href="#mercury"><span>Mercury</span></a></li>
-            <li class="venus"><a href="#venus"><span>Venus</span></a></li>
-            <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
-            <li class="mars"><a href="#mars"><span>Mars</span></a></li>
-            <li class="asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
-            <li class="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
-            <li class="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
-            <li class="uranus"><a href="#uranus"><span>Uranus</span></a></li>
-            <li class="neptune"><a href="#neptune"><span>Neptune</span></a></li>
-            <li class="pluto"><a href="#pluto"><span>Pluto</span></a></li>
+            <li class="planet sun" data="sun"><a href="#sun"><span>Sun</span></a></li>
+            <li class="planet mercury" data="mercury (planet)"><a href="#mercury"><span>Mercury</span></a></li>
+            <li class="planet venus" data="venus"><a href="#venus"><span>Venus</span></a></li>
+            <li class="planet earth" data="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+            <li class="planet mars" data="mars"><a href="#mars"><span>Mars</span></a></li>
+            <li class="planet asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
+            <li class="planet jupiter" data="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
+            <li class="planet saturn" data="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
+            <li class="planet uranus"><a href="#uranus"><span>Uranus</span></a></li>
+            <li class="planet neptune" data="neptune"><a href="#neptune"><span>Neptune</span></a></li>
+            <li class="planet pluto" data="pluto"><a href="#pluto"><span>Pluto</span></a></li>
         </ul>
     </section>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">close</span><br>
+    <div id="test"></div>
+    <div id="nasa-test"></div>
+  </div>
+</div>
 
 </body>
 
 <script type="text/javascript" src="assets/js/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 </html>
