@@ -1,0 +1,30 @@
+input {
+    margin: 2px;
+    transition: all 0.4s ease;
+}
+
+#SS-container {
+    margin: 150px auto;
+}
+
+.solarsystem {
+    margin: 0 auto;
+    width: 900px;
+}
+
+#btn-container {
+    margin-bottom: 150px;
+    text-align: center;
+    color: white;
+}
+
+.row-1 {
+    margin-bottom: 10px;
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: #6c6174;
+}
