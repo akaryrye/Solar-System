@@ -9,28 +9,30 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/SolarSystem.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-    <div id="container">
-        <div id="welcome">Solar System</div>
-        <div id="planets">
-            <button class="planet" data="sun">Sun</button>
-            <button class="planet" data="mercury">Mercury</button>
-            <button class="planet" data="venus">Venus</button>
-            <button class="planet" data="earth">Earth</button>
-            <button class="planet" data="mars">Mars</button>
-            <button class="planet" data="jupiter">Jupiter</button>
-            <button class="planet" data="saturn">Saturn</button>
-            <button class="planet" data="neptune">Neptune</button>
-            <button class="planet" data="pluto">Pluto</button>
-        </div>
-        <div id="test"></div>
-    </div>
 
-    <section id="clearfix">
+    <header>
+        <div id="header-container">
+            <nav class="cl-effect">
+                <a href="#">link</a>
+                <a href="#">link</a>
+
+                <img class="logo" src="assets/images/logo.png" alt="Logo">
+
+                <a href="">link</a>
+                <a href="">link</a>
+            </nav>
+
+    </header>
+
+    <section id="SS-container">
         <ul class="solarsystem">
             <li class="sun"><a href="#sun"><span>Sun</span></a></li>
             <li class="mercury"><a href="#mercury"><span>Mercury</span></a></li>
@@ -45,11 +47,37 @@
             <li class="pluto"><a href="#pluto"><span>Pluto</span></a></li>
         </ul>
     </section>
+    <div id="btn-container">
+        <div id="welcome">Solar System</div>
+        <div id="planets">
+            <section class="row-1">
+                <input type="image" class="planet grow" data="mercury" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
+                <input type="image" class="planet grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
+                <input type="image" class="planet grow" data="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
+                <input type="image" class="planet grow" data="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
+                <input type="image" class="planet grow" data="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
+                <input type="image" class="planet grow" data="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
+                <input type="image" class="planet grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
+                <input type="image" class="planet grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
+            </section>
+            <section class="row-2">
+
+                <input type="image" class="planet grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
+                <input type="image" class="planet grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
+            </section>
+        </div>
+        <div id="test"></div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
 
+
+<script type="text/javascript" src="assets/js/app.js"></script>
+
 </body>
+
 
 </html>
