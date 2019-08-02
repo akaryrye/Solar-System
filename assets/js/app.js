@@ -7,7 +7,7 @@ $('.planet').on('click', function (e) {
     e.preventDefault
     query = $(this).attr("data");
     url = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
-
+    console.log("clicked")
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/" + url,
         method: "GET"
