@@ -1,0 +1,92 @@
+#header-container {
+    text-align: center;
+    padding-top: 40px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 50px;
+    outline: none;
+    color: #28AF63;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-shadow: 2px 2px #b941ff;
+    font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #b941ff;
+    text-shadow: 2px 2px #28AF63;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.cl-effect a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.cl-effect a::before,
+.cl-effect a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #0089BA;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.cl-effect a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.cl-effect a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.cl-effect a:hover::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::before,
+.cl-effect a:focus::after {
+    opacity: 1;
+}
+
+.cl-effect a:hover::before,
+.cl-effect a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.cl-effect a:hover::after,
+.cl-effect a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
