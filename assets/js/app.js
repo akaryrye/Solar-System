@@ -3,15 +3,14 @@ $('.planet').on('click', function (e) {
     e.preventDefault
     let query = $(this).attr("data");
     let wikiURL = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
-    let nasaKEY = "&api_key=ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO";
-    let nasaURL = "https://images-api.nasa.gov/search?q=";
+    let nasaKEY = "ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO";
+    let nasaURL = `https://images-api.nasa.gov/search?q=${query}`; //media_type=image&&api_key=${nasaKEY}`;
 
     // Planets API
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/" + query,
         method: "GET"
     }).then(function (planet) {
-        console.log(planet);
         $("#planet-stats").html(
             `<ul>
                 <li>Name: ${planet.name}</li>
@@ -42,12 +41,17 @@ $('.planet').on('click', function (e) {
 
     // NASA API
     $.ajax({
-        url: nasaURL + query,
+        url: nasaURL,
         method: "GET"
     }).then(function (nasa) {
-        console.log(nasa.collection.items[1].links[0]);
+        console.log(nasa);
         $("#nasa-test").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
     });
+
+
+    // "Un-Hide" modal element
+    
+
 });
 
 // Hide modal on click
