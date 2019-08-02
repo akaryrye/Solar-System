@@ -1,42 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 
-body {
-    box-sizing: border-box;
-    max-width: 960px;
-    margin: 0 auto;
-    font: 14px/1.5 "PT Sans Narrow", sans-serif;
-    background: black url("../images/eclipse-1492818_1920.jpg") center no-repeat;
-    color: #b5aaf5;
-}
-
-#nav {
-    background-color: #575757;
-    color: #8ca3d6a9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    max-width: 960px;
-    min-width: 400px;
-    margin: 15px auto;
-    padding: 15px; 
-    border-radius: 10px;
-    opacity: .9;
-}
-
-#title {
-    padding-bottom: 15px;
-    font-size: 2.5em;
-}
-
-#planets {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#animation {
-    margin: 0 auto;
-}
 
 /* Modal */
 .modal {
