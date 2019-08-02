@@ -6,11 +6,12 @@ $('.planet').on('click', function (e) {
     let nasaKEY = "ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO";
     let nasaURL = `https://images-api.nasa.gov/search?q=${query}`; //media_type=image&&api_key=${nasaKEY}`;
 
-    // Planets API
+    // Planets API  
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/" + query,
         method: "GET"
     }).then(function (planet) {
+        $("#planet-stats").empty();
         $("#planet-stats").html(
             `<ul>
                 <li>Name: ${planet.name}</li>
@@ -35,7 +36,8 @@ $('.planet').on('click', function (e) {
     }).then(function (response) {
         $("#test").empty();
         let key = Object.keys(response.query.pages)[0];
-        $("#test").html(response.query.pages[key].extract);
+        $("#wiki").html(response.query.pages[key].extract);
+        // "Un-Hide" modal element
         $("#myModal").css("display", "block");
     });
 
@@ -45,13 +47,8 @@ $('.planet').on('click', function (e) {
         method: "GET"
     }).then(function (nasa) {
         console.log(nasa);
-        $("#nasa-test").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
+        $("#nasa").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
     });
-
-
-    // "Un-Hide" modal element
-    
-
 });
 
 // Hide modal on click
