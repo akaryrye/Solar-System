@@ -7,6 +7,15 @@ body {
     background-color: #08090A;
 }
 
+#btn-container {
+    margin-top: 15%;
+}
+
+#universe {
+    margin-top: 35%;
+    margin-bottom: 75%;
+}
+
 #galaxy {
     position: relative;
     transform: rotateX(75deg);
@@ -24,7 +33,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(31, 62, 90, 0.2);
     border-radius: 50%;
     transform-style: preserve-3d;
     animation-name: orbit;
@@ -687,12 +696,12 @@ body {
 /* Iamages */
 
 body {
-    background-image: url('../images/background-dark-grey-4.jpg');
+    background-image: url('../images/background.jpg');
 }
 
 #sun {
     background-image: url('../images/sun.jpg');
-    box-shadow: 2px 2px 100px white;
+    box-shadow: 2px 2px 100px white, 2px 2px 50px orange, 2px 2px 20px red;
 }
 
 #mercury .planet {
