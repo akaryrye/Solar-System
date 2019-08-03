@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/modal.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css" />
     <link rel="stylesheet" href="assets/css/SolarSystem.css">
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/mainStyle.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
@@ -32,42 +33,100 @@
             </nav>
 
     </header>
-
-    <section id="SS-container">
-        <ul class="solarsystem">
-            <li class="planet sun" data="sun"><a href="#sun"><span>Sun</span></a></li>
-            <li class="planet mercury" data="mercury%20(planet)"><a href="#mercury"><span>Mercury</span></a></li>
-            <li class="planet venus" data="venus"><a href="#venus"><span>Venus</span></a></li>
-            <li class="planet earth" data="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
-            <li class="planet mars" data="mars"><a href="#mars"><span>Mars</span></a></li>
-            <li class="planet asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
-            <li class="planet jupiter" data="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
-            <li class="planet saturn" data="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
-            <li class="planet uranus"><a href="#uranus"><span>Uranus</span></a></li>
-            <li class="planet neptune" data="neptune"><a href="#neptune"><span>Neptune</span></a></li>
-            <li class="planet pluto" data="pluto"><a href="#pluto"><span>Pluto</span></a></li>
-        </ul>
-    </section>
     <div id="btn-container">
         <div id="welcome">Solar System</div>
         <div id="planets">
             <section class="row-1">
-                <input type="image" class="planet grow" data="mercury%20(planet)" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
-                <input type="image" class="planet grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
-                <input type="image" class="planet grow" data="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
-                <input type="image" class="planet grow" data="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
-                <input type="image" class="planet grow" data="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
-                <input type="image" class="planet grow" data="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
-                <input type="image" class="planet grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
-                <input type="image" class="planet grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
+                <input type="image" class="satellite grow" data="mercury%20(planet)" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
+                <input type="image" class="satellite grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
+                <input type="image" class="satellite grow" data="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
+                <input type="image" class="satellite grow" data="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
+                <input type="image" class="satellite grow" data="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
+                <input type="image" class="satellite grow" data="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
+                <input type="image" class="satellite grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
+                <input type="image" class="satellite grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
             </section>
             <section class="row-2">
 
-                <input type="image" class="planet grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
-                <input type="image" class="planet grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
+                <input type="image" class="satellite grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
+                <input type="image" class="satellite grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
             </section>
         </div>
     </div>
+
+
+
+    <div id="galaxy">
+        <div id="solar-system">
+            <div id="mercury" class="orbit">
+                <div class="pos">
+                    <div class="planet mercury" data="mercury%20(planet)">
+
+                    </div>
+                </div>
+            </div>
+            <div id="venus" class="orbit">
+                <div class="pos">
+                    <div class="planet venus" data="venus">
+
+                    </div>
+                </div>
+            </div>
+            <div id="earth" class="orbit">
+                <div class="pos">
+                    <div class="orbit">
+                        <div class="pos">
+                            <div class="moon"></div>
+                        </div>
+                    </div>
+                    <div class="planet earth" data="earth">
+
+                    </div>
+                </div>
+            </div>
+            <div id="mars" class="orbit">
+                <div class="pos">
+                    <div class="planet mars" data="mars">
+
+                    </div>
+                </div>
+            </div>
+            <div id="jupiter" class="orbit">
+                <div class="pos">
+                    <div class="planet jupiter" data="jupiter">
+
+                    </div>
+                </div>
+            </div>
+            <div id="saturn" class="orbit">
+                <div class="pos">
+                    <div class="planet saturn" data="saturn">
+                        <div class="ring"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="uranus" class="orbit">
+                <div class="pos">
+                    <div class="planet uranus" data="uranus">
+
+                    </div>
+                </div>
+            </div>
+            <div id="neptune" class="orbit">
+                <div class="pos">
+                    <div class="planet neptune" data="neptune">
+
+                    </div>
+                </div>
+            </div>
+            <div id="sun">
+
+            </div>
+        </div>
+
+    </div>
+
 
 
     <!-- Modal -->
@@ -81,7 +140,7 @@
     </div>
 
 
-<script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
 
 </body>
 
