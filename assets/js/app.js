@@ -1,5 +1,5 @@
 // Queries wikipedia
-$('.planet').on('click', function (e) {
+$('.satellite').on('click', function(e) {
     e.preventDefault
     let query = $(this).attr("data");
     let wikiURL = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
@@ -10,7 +10,7 @@ $('.planet').on('click', function (e) {
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/" + query,
         method: "GET"
-    }).then(function (planet) {
+    }).then(function(planet) {
         $("#planet-stats").empty();
         $("#planet-stats").html(
             `<ul>
@@ -33,7 +33,7 @@ $('.planet').on('click', function (e) {
     $.ajax({
         url: "https://cors-anywhere.herokuapp.com/" + wikiURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         $("#test").empty();
         let key = Object.keys(response.query.pages)[0];
         $("#wiki").html(response.query.pages[key].extract);
@@ -45,17 +45,17 @@ $('.planet').on('click', function (e) {
     $.ajax({
         url: nasaURL,
         method: "GET"
-    }).then(function (nasa) {
+    }).then(function(nasa) {
         console.log(nasa);
         $("#nasa").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
     });
 });
 
 // Hide modal on click
-$(".close").on("click", function () {
+$(".close").on("click", function() {
     $("#myModal").css("display", "none");
 });
 
-$(document).on("click", $("#myModal"), function () {
+$(document).on("click", $("#myModal"), function() {
     $("#myModal").css("display", "none");
 });
