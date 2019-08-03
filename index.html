@@ -18,7 +18,6 @@
 
 <body>
 
-
     <header>
         <div id="header-container">
             <nav class="cl-effect">
@@ -30,27 +29,29 @@
                 <a href="">link</a>
                 <a href="">link</a>
             </nav>
-
+        </div>
     </header>
 
     <section id="SS-container">
         <ul class="solarsystem">
-            <li class="planet sun" data="sun"><a href="#sun"><span>Sun</span></a></li>
-            <li class="planet mercury" data="mercury%20(planet)"><a href="#mercury"><span>Mercury</span></a></li>
-            <li class="planet venus" data="venus"><a href="#venus"><span>Venus</span></a></li>
-            <li class="planet earth" data="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
-            <li class="planet mars" data="mars"><a href="#mars"><span>Mars</span></a></li>
-            <li class="planet asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
-            <li class="planet jupiter" data="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
-            <li class="planet saturn" data="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
-            <li class="planet uranus"><a href="#uranus"><span>Uranus</span></a></li>
-            <li class="planet neptune" data="neptune"><a href="#neptune"><span>Neptune</span></a></li>
-            <li class="planet pluto" data="pluto"><a href="#pluto"><span>Pluto</span></a></li>
+            <li class="planet sun" data="sun" thumb="sun"><a href="#sun"><span>Sun</span></a></li>
+            <li class="planet mercury" data="mercury%20(planet)" thumb="1"><a href="#mercury"><span>Mercury</span></a></li>
+            <li class="planet venus" data="venus" thumb="2"><a href="#venus"><span>Venus</span></a></li>
+            <li class="planet earth" data="earth" thumb="3"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+            <li class="planet mars" data="mars" thumb="4"><a href="#mars"><span>Mars</span></a></li>
+            <li class="planet asteroids_meteorids" data="kuiper%20belt" thumb="kuiper"><span>Asteroids &amp; Meteorids</span></li>
+            <li class="planet jupiter" data="jupiter" thumb="5"><a href="#jupiter"><span>Jupiter</span></a></li>
+            <li class="planet saturn" data="saturn" thumb="6"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
+            <li class="planet uranus" data="uranus" thumb="7"><a href="#uranus"><span>Uranus</span></a></li>
+            <li class="planet neptune" data="neptune" thumb="8"><a href="#neptune"><span>Neptune</span></a></li>
+            <li class="planet pluto" data="pluto" thumb="9"><a href="#pluto"><span>Pluto</span></a></li>
         </ul>
     </section>
+
     <div id="btn-container">
         <div id="welcome">Solar System</div>
         <div id="planets">
+
             <section class="row-1">
                 <input type="image" class="planet grow" data="mercury%20(planet)" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
                 <input type="image" class="planet grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
@@ -61,14 +62,14 @@
                 <input type="image" class="planet grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
                 <input type="image" class="planet grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
             </section>
-            <section class="row-2">
 
+            <section class="row-2">
                 <input type="image" class="planet grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
                 <input type="image" class="planet grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
             </section>
+
         </div>
     </div>
-
 
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -79,7 +80,6 @@
             <div id="nasa"></div>
         </div>
     </div>
-
 
 <script type="text/javascript" src="assets/js/app.js"></script>
 
