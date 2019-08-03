@@ -59,3 +59,5 @@ $(".close").on("click", function() {
 $(document).on("click", $("#myModal"), function() {
     $("#myModal").css("display", "none");
 });
+
+/*---------------------------------------------------------------play/stop--------------*/
