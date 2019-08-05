@@ -1,20 +1,23 @@
 // Queries wikipedia
-$('.satellite').on('click', function(e) {
+$('.satellite').on('click', function (e) {
     e.preventDefault
-    let query = $(this).attr("data");
-    let wikiURL = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${query}`;
-    let nasaKEY = "ejYfEsz7YUb0d2SpoVde1mSoOdWgiYBAL1jKWbwO";
-    let nasaURL = `https://images-api.nasa.gov/search?q=${query}`; //media_type=image&&api_key=${nasaKEY}`;
+    let queryOne = $(this).attr("data");
+    let queryTwo = $(this).attr("data2");
+    let wikiURL = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${queryOne}`;
+    let planetsURL = `https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/${queryTwo}`;
+
+    $("#nasa").html(`<img src='assets/images/modal/${queryTwo}-modal.jpg'></img>`);
 
     // Planets API  
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/" + query,
+        url: planetsURL,
         method: "GET"
-    }).then(function(planet) {
+    }).then(function (planet) {
         $("#planet-stats").empty();
+        $("#modal-title").empty();
+        $("#modal-title").html(`<h2>${planet.name}</h2>`);
         $("#planet-stats").html(
             `<ul>
-                <li>Name: ${planet.name}</li>
                 <li>Mass: ${planet.mass} 10<sup>24</sup> kg</li>
                 <li>Diameter: ${planet.diameter}  km</li>
                 <li>Density: ${planet.density} kg/m<sup>3</sup></li>
@@ -31,31 +34,23 @@ $('.satellite').on('click', function(e) {
 
     // Wikipedia API
     $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/" + wikiURL,
+        url: wikiURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         $("#test").empty();
         let key = Object.keys(response.query.pages)[0];
         $("#wiki").html(response.query.pages[key].extract);
+        
         // "Un-Hide" modal element
         $("#myModal").css("display", "block");
-    });
-
-    // NASA API
-    $.ajax({
-        url: nasaURL,
-        method: "GET"
-    }).then(function(nasa) {
-        console.log(nasa);
-        $("#nasa").html(`<img src='${nasa.collection.items[1].links[0].href}'></img>`);
     });
 });
 
 // Hide modal on click
-$(".close").on("click", function() {
+$(".close").on("click", function () {
     $("#myModal").css("display", "none");
 });
 
-$(document).on("click", $("#myModal"), function() {
+$(document).on("click", $("#myModal"), function () {
     $("#myModal").css("display", "none");
 });

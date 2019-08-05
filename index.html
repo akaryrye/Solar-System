@@ -36,14 +36,14 @@
             <div id="solar-system">
                 <div id="mercury" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="mercury%20(planet)">
+                        <div class="planet satellite" data="mercury%20(planet)" data2="mercury">
 
                         </div>
                     </div>
                 </div>
                 <div id="venus" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="venus">
+                        <div class="planet satellite" data="venus" data2="venus">
 
                         </div>
                     </div>
@@ -52,31 +52,31 @@
                     <div class="pos">
                         <div class="orbit">
                             <div class="pos">
-                                <div class="moon"></div>
+                                <div class="moon" data2="moon"></div>
                             </div>
                         </div>
-                        <div class="planet satellite" data="earth">
+                        <div class="planet satellite" data="earth" data2="earth">
 
                         </div>
                     </div>
                 </div>
                 <div id="mars" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="mars">
+                        <div class="planet satellite" data="mars" data2="mars">
 
                         </div>
                     </div>
                 </div>
                 <div id="jupiter" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="jupiter">
+                        <div class="planet satellite" data="jupiter" data2="jupiter">
 
                         </div>
                     </div>
                 </div>
                 <div id="saturn" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="saturn">
+                        <div class="planet satellite" data="saturn" data2="saturn">
                             <div class="ring"></div>
 
                         </div>
@@ -84,19 +84,19 @@
                 </div>
                 <div id="uranus" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="uranus">
+                        <div class="planet satellite" data="uranus" data2="uranus">
 
                         </div>
                     </div>
                 </div>
                 <div id="neptune" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="neptune">
+                        <div class="planet satellite" data="neptune" data2="neptune">
 
                         </div>
                     </div>
                 </div>
-                <div id="sun" class="planet satellite grow" data="sun">
+                <div id="sun" class="planet satellite grow" data="sun" data2="sun">
 
                 </div>
             </div>
@@ -110,28 +110,28 @@
         <div id="planets">
 
             <section class="row-1">
-                <input type="image" class="satellite grow" data="mercury%20(planet)" src="assets/images/topmercury.png"
+                <input type="image" class="satellite grow" data="mercury%20(planet)" data2="mercury" src="assets/images/topmercury.png"
                     style="box-shadow: 0 0 15px #6c6174"></input>
-                <input type="image" class="satellite grow" data="venus" src="assets/images/topvenus.png"
+                <input type="image" class="satellite grow" data="venus" data2="venus" src="assets/images/topvenus.png"
                     style="box-shadow: 0 0 15px #a24021"></input>
-                <input type="image" class="satellite grow" data="earth" src="assets/images/topearth.png"
+                <input type="image" class="satellite grow" data="earth" data2="earth" src="assets/images/topearth.png"
                     style="box-shadow: 0 0 15px #7dbcf1"></input>
-                <input type="image" class="satellite grow" data="mars" src="assets/images/topmars.png"
+                <input type="image" class="satellite grow" data="mars" data2="mars" src="assets/images/topmars.png"
                     style="box-shadow: 0 0 15px #b45502"></input>
-                <input type="image" class="satellite grow" data="jupiter" src="assets/images/topjupiter.png"
+                <input type="image" class="satellite grow" data="jupiter" data2="jupiter" src="assets/images/topjupiter.png"
                     style="box-shadow: 0 0 15px #4c351e"></input>
-                <input type="image" class="satellite grow" data="saturn" src="assets/images/topsaturn.png"
+                <input type="image" class="satellite grow" data="saturn" data2="saturn" src="assets/images/topsaturn.png"
                     style="box-shadow: 0 0 15px #d6d1c6"></input>
-                <input type="image" class="satellite grow" data="uranus" src="assets/images/topuranus.png"
+                <input type="image" class="satellite grow" data="uranus" data2="uranus" src="assets/images/topuranus.png"
                     style="box-shadow: 0 0 15px #63828c"></input>
-                <input type="image" class="satellite grow" data="neptune" src="assets/images/topneptune.png"
+                <input type="image" class="satellite grow" data="neptune" data2="neptune" src="assets/images/topneptune.png"
                     style="box-shadow: 0 0 15px #990338"></input>
             </section>
 
             <section class="row-2">
-                <input type="image" class="satellite grow" data="pluto" src="assets/images/sidepluto.png"
+                <input type="image" class="satellite grow" data="pluto" data2="pluto" src="assets/images/sidepluto.png"
                     style="box-shadow: 0 0 15px #1b3651"></input>
-                <input type="image" class="satellite grow" data="sun" src="assets/images/sidesun.png"
+                <input type="image" class="satellite grow" data="sun" data2="sun" src="assets/images/sidesun.png"
                     style="box-shadow: 0 0 15px #fb5507"></input>
             </section>
 
@@ -139,11 +139,15 @@
     </div>
     <!-- Modal -->
     <div id="myModal" class="modal">
-        <span class="close">close</span><br>
+        
         <div class="modal-content">
-            <div id="planet-stats"></div>
+            <span class="close">close</span><br>
+            <div id="modal-title" img="1.jpg"></div>
+            <div id="modal-one">
+                <div id="nasa"></div>
+                <div id="planet-stats"></div>  
+            </div>
             <div id="wiki"></div>
-            <div id="nasa"></div>
         </div>
     </div>
 

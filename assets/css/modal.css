@@ -35,3 +35,21 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  #modal-title {
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+  }
+
+  #modal-one {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+
+  #nasa, #planet-stats {
+    width: 45%;
+    margin: 20px;
+  }
