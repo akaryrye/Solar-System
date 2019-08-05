@@ -10,33 +10,46 @@
     <link rel="stylesheet" type="text/css" href="assets/css/modal.css" />
     <link rel="stylesheet" href="assets/css/SolarSystem.css">
     <link rel="stylesheet" href="assets/css/input.css">
-    <link rel="stylesheet" href="assets/css/nav.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-
-    <header>
-        <div id="header-container">
-            <nav class="cl-effect">
-                <a href="#">link</a>
-                <a href="#">link</a>
-
-                <img class="logo" src="assets/images/logo.png" alt="Logo">
-
-                <a href="">link</a>
-                <a href="">link</a>
-            </nav>
-        </div>
+    <header class="title-container">
+        <p class="explore">
+            <span class="title">
+                  Solar System
+            </span> Explore the Planets
+        </p>
     </header>
+    <div id="btn-container">
+        <div id="welcome">Solar System</div>
+        <div id="planets">
+            <section class="row-1">
+                <input type="image" class="satellite grow" data="mercury%20(planet)" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
+                <input type="image" class="satellite grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
+                <input type="image" class="satellite grow" data="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
+                <input type="image" class="satellite grow" data="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
+                <input type="image" class="satellite grow" data="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
+                <input type="image" class="satellite grow" data="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
+                <input type="image" class="satellite grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
+                <input type="image" class="satellite grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
+            </section>
 
+            <section class="row-2">
+
+                <input type="image" class="satellite grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
+                <input type="image" class="satellite grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
+            </section>
+        </div>
+    </div>
     <div id="universe">
         <div id="galaxy">
             <div id="solar-system">
                 <div id="mercury" class="orbit">
                     <div class="pos">
-                        <div class="planet satellite" data="mercury%20(planet)" data2="mercury">
+                        <div class="planet" data="mercury%20(planet)">
 
                         </div>
                     </div>
@@ -105,38 +118,6 @@
 
     </div>
 
-    <div id="btn-container">
-        <div id="welcome">Solar System</div>
-        <div id="planets">
-
-            <section class="row-1">
-                <input type="image" class="satellite grow" data="mercury%20(planet)" data2="mercury" src="assets/images/topmercury.png"
-                    style="box-shadow: 0 0 15px #6c6174"></input>
-                <input type="image" class="satellite grow" data="venus" data2="venus" src="assets/images/topvenus.png"
-                    style="box-shadow: 0 0 15px #a24021"></input>
-                <input type="image" class="satellite grow" data="earth" data2="earth" src="assets/images/topearth.png"
-                    style="box-shadow: 0 0 15px #7dbcf1"></input>
-                <input type="image" class="satellite grow" data="mars" data2="mars" src="assets/images/topmars.png"
-                    style="box-shadow: 0 0 15px #b45502"></input>
-                <input type="image" class="satellite grow" data="jupiter" data2="jupiter" src="assets/images/topjupiter.png"
-                    style="box-shadow: 0 0 15px #4c351e"></input>
-                <input type="image" class="satellite grow" data="saturn" data2="saturn" src="assets/images/topsaturn.png"
-                    style="box-shadow: 0 0 15px #d6d1c6"></input>
-                <input type="image" class="satellite grow" data="uranus" data2="uranus" src="assets/images/topuranus.png"
-                    style="box-shadow: 0 0 15px #63828c"></input>
-                <input type="image" class="satellite grow" data="neptune" data2="neptune" src="assets/images/topneptune.png"
-                    style="box-shadow: 0 0 15px #990338"></input>
-            </section>
-
-            <section class="row-2">
-                <input type="image" class="satellite grow" data="pluto" data2="pluto" src="assets/images/sidepluto.png"
-                    style="box-shadow: 0 0 15px #1b3651"></input>
-                <input type="image" class="satellite grow" data="sun" data2="sun" src="assets/images/sidesun.png"
-                    style="box-shadow: 0 0 15px #fb5507"></input>
-            </section>
-
-        </div>
-    </div>
     <!-- Modal -->
     <div id="myModal" class="modal">
         
