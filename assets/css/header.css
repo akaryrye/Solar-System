@@ -1,5 +1,5 @@
 .title-container {
-    font: 100 1em/1.5 "Neuton";
+    font: 100 1em/1.5 'Audiowide', cursive;
     background: #090d00;
     color: rgba(255, 255, 255, .25);
     text-align: center;
@@ -21,7 +21,7 @@
 }
 
 .title {
-    font: 600 3.5em/1 "Oswald", sans-serif;
+    font: 600 3em/1'Audiowide', cursive;
     letter-spacing: 0;
     padding: .25em 0 .325em;
     display: block;
@@ -33,7 +33,7 @@
     background-clip: text;
     /* Animate Background Image */
     -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 15s linear infinite;
+    -webkit-animation: aitf 22s linear infinite;
     /* Activate hardware acceleration for smoother animations */
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;

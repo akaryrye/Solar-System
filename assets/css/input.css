@@ -1,21 +1,110 @@
-input {
-    margin: 5px;
-    transition: all 0.4s ease;
-}
-
-#btn-container {
-    margin-bottom: 150px;
-    text-align: center;
-    color: white;
-}
-
-.row-1 {
-    margin-bottom: 10px;
-}
-
-.grow:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    background-color: #6c6174;
-}
+    input {
+        margin: 5px;
+        transition: all 0.4s ease;
+    }
+    
+    #choose {
+        padding-bottom: 50px;
+    }
+    
+    h3 {
+        font: 100 1em/1.5 'Audiowide', cursive;
+        color: rgba(255, 255, 255, .25);
+        text-transform: uppercase;
+        letter-spacing: .5em;
+    }
+    
+    h3::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 20%;
+        padding-bottom: 8px;
+        border-bottom: 4px double rgba(255, 255, 255, .25);
+    }
+    
+    #btn-container {
+        margin-bottom: 100px;
+        text-align: center;
+        color: white;
+        padding-top: 20%;
+    }
+    
+    #btn-container::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: 15%;
+        border-bottom: 4px double rgba(255, 255, 255, .25);
+    }
+    
+    .row-1 {
+        margin-bottom: 10px;
+    }
+    
+    .grow:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        background-color: #6c6174;
+    }
+    /*-------------------------------------------------------------------- Scrolling */
+    
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .down {
+        position: relative;
+        width: 50px;
+        height: 80px;
+        border-radius: 25px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .25);
+        overflow: hidden;
+    }
+    
+    .down::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .25);
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%, 0);
+        animation: animate 1s linear infinite;
+    }
+    
+    .down::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 15px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .25);
+        left: 50%;
+        top: 5px;
+        transform: translate(-50%, 0);
+        border-radius: 3px;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: translate(-50%, 20px);
+            opacity: 0;
+        }
+        80% {
+            transform: translate(-50%, 60px);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, 100px);
+            opacity: 0;
+        }
+    }
