@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Solar System</title>
     <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/modal.css" />
     <link rel="stylesheet" href="assets/css/SolarSystem.css">
@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+
     <header class="title-container">
         <p class="explore">
             <span class="title">
@@ -26,118 +26,119 @@
         </p>
     </header>
 
-
     <div id="btn-container">
         <div id="choose">
             <h3>Choose a Planet</h3>
         </div>
+
+    
+    <div id="btn-container">
+
         <div id="planets">
+
             <section class="row-1">
-                <input type="image" class="satellite grow" data="mercury%20(planet)" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
-                <input type="image" class="satellite grow" data="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
-                <input type="image" class="satellite grow" data="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
-                <input type="image" class="satellite grow" data="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
-                <input type="image" class="satellite grow" data="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
-                <input type="image" class="satellite grow" data="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
-                <input type="image" class="satellite grow" data="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
-                <input type="image" class="satellite grow" data="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
+                <input type="image" class="satellite grow" data="mercury%20(planet)" data2="mercury" src="assets/images/topmercury.png" style="box-shadow: 0 0 15px #6c6174"></input>
+                <input type="image" class="satellite grow" data="venus" data2="venus" src="assets/images/topvenus.png" style="box-shadow: 0 0 15px #a24021"></input>
+                <input type="image" class="satellite grow" data="earth" data2="earth" src="assets/images/topearth.png" style="box-shadow: 0 0 15px #7dbcf1"></input>
+                <input type="image" class="satellite grow" data="mars" data2="mars" src="assets/images/topmars.png" style="box-shadow: 0 0 15px #b45502"></input>
+                <input type="image" class="satellite grow" data="jupiter" data2="jupiter" src="assets/images/topjupiter.png" style="box-shadow: 0 0 15px #4c351e"></input>
+                <input type="image" class="satellite grow" data="saturn" data2="saturn" src="assets/images/topsaturn.png" style="box-shadow: 0 0 15px #d6d1c6"></input>
+                <input type="image" class="satellite grow" data="uranus" data2="uranus" src="assets/images/topuranus.png" style="box-shadow: 0 0 15px #63828c"></input>
+                <input type="image" class="satellite grow" data="neptune" data2="neptune" src="assets/images/topneptune.png" style="box-shadow: 0 0 15px #990338"></input>
             </section>
 
             <section class="row-2">
-
-                <input type="image" class="satellite grow" data="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
-                <input type="image" class="satellite grow" data="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
+                <input type="image" class="satellite grow" data="pluto" data2="pluto" src="assets/images/sidepluto.png" style="box-shadow: 0 0 15px #1b3651"></input>
+                <input type="image" class="satellite grow" data="sun" data2="sun" src="assets/images/sidesun.png" style="box-shadow: 0 0 15px #fb5507"></input>
             </section>
+
         </div>
+
         <!-- scrolling icon -->
         <div id="center">
             <div class="down"></div>
+      
+    </div>
 
-        </div>
-        <div id="universe">
-            <div id="galaxy">
-                <div id="solar-system">
-                    <div id="mercury" class="orbit">
-                        <div class="pos">
-                            <div class="planet" data="mercury%20(planet)">
+    <div id="universe">
+        <div id="galaxy">
+            <div id="solar-system">
 
-                            </div>
-                        </div>
-                    </div>
-                    <div id="venus" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="venus">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="earth" class="orbit">
-                        <div class="pos">
-                            <div class="orbit">
-                                <div class="pos">
-                                    <div class="moon"></div>
-                                </div>
-                            </div>
-                            <div class="planet satellite" data="earth">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="mars" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="mars">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="jupiter" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="jupiter">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="saturn" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="saturn">
-                                <div class="ring"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="uranus" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="uranus">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="neptune" class="orbit">
-                        <div class="pos">
-                            <div class="planet satellite" data="neptune">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="sun" class="planet satellite grow" data="sun">
-
+                <div id="mercury" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="mercury%20(planet)" data2="mercury"></div>
                     </div>
                 </div>
 
-            </div>
+                <div id="venus" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="venus" data2="venus"></div>
+                    </div>
+                </div>
 
+                <div id="earth" class="orbit">
+                    <div class="pos">
+                        <div class="orbit">
+                            <div class="pos">
+                                <div class="moon" data2="moon"></div>
+                            </div>
+                        </div>
+                        <div class="planet satellite" data="earth" data2="earth"></div>
+                    </div>
+                </div>
+
+                <div id="mars" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="mars" data2="mars"></div>
+                    </div>
+                </div>
+
+                <div id="jupiter" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="jupiter" data2="jupiter"></div>
+                    </div>
+                </div>
+
+                <div id="saturn" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="saturn" data2="saturn">
+                            <div class="ring"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="uranus" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="uranus" data2="uranus"></div>
+                    </div>
+                </div>
+
+                <div id="neptune" class="orbit">
+                    <div class="pos">
+                        <div class="planet satellite" data="neptune" data2="neptune"></div>
+                    </div>
+                </div>
+
+                <div id="sun" class="planet satellite grow" data="sun" data2="sun"></div>
+
+
+            </div>
         </div>
 
-
-        <!-- Modal -->
-        <div id="myModal" class="modal">
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        
+        <div class="modal-content">
             <span class="close">close</span><br>
-            <div class="modal-content">
-                <div id="planet-stats"></div>
-                <div id="wiki"></div>
+            <div id="modal-title"></div>
+            <div id="modal-one">
                 <div id="nasa"></div>
+                <div id="planet-stats"></div>  
             </div>
+            <div id="wiki"></div>
+
         </div>
+
 
 
         <script type="text/javascript" src="assets/js/app.js"></script>
