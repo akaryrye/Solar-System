@@ -6,8 +6,10 @@ $('.satellite').on('click', function (e) {
     let wikiURL = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=1&titles=${queryOne}`;
     let planetsURL = `https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets/${queryTwo}`;
 
-    //$("#nasa").html(`<img src='assets/images/modal/${queryTwo}-modal.jpg'></img>`);
+    
     $("#nasa").html(`<img src='assets/images/modal/${queryTwo}-modal.gif'></img>`);
+    $("#nasa").append(`<img src='assets/images/modal/${queryTwo}-modal.jpg'></img>`);
+
 
     // Planets API  
     $.ajax({
