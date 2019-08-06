@@ -57,3 +57,8 @@
     width: 45%;
     margin: 20px;
 }
+
+#nasa img {
+    border-radius: 50%;
+    opacity: .8;
+}
