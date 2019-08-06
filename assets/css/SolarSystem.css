@@ -1,13 +1,12 @@
 /* --------------------------------------------------------------------------- main styles */
 
+#btn-container {
+    padding-top: 20%;
+}
+
 #universe {
-    padding-top: 50%;
-    z-index: 1;
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    font-size: .53em;
+    padding-top: 40%;
+    padding-bottom: 50%;
 }
 
 #galaxy {
@@ -316,8 +315,8 @@
 #earth .orbit {
     width: 6em;
     height: 6em;
-    margin-top: -3.5em;
-    margin-left: -3.5em;
+    margin-top: -3em;
+    margin-left: -3em;
 }
 
 #mars.orbit {
